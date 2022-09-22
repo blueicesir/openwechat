@@ -119,7 +119,9 @@ func (b *Bot) hotLoginInit(item HotReloadStorageItem) error {
 
 // Login 用户登录
 func (b *Bot) Login() error {
+	fmt.Println("Login::GetLoginUUID() start ...")
 	uuid, err := b.Caller.GetLoginUUID()
+	fmt.Println("Login::GetLoginUUID() called")
 	b.uuid = uuid
 	if err != nil {
 		fmt.Printf("openwechat::Login() fail,%v\n",err)
