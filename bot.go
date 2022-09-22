@@ -121,6 +121,7 @@ func (b *Bot) Login() error {
 	uuid, err := b.Caller.GetLoginUUID()
 	b.uuid = uuid
 	if err != nil {
+		fmt.Printf("openwechat::Login() fail,%v\n",err)
 		return err
 	}
 	return b.LoginWithUUID(uuid)
