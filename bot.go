@@ -130,6 +130,7 @@ func (b *Bot) Login() error {
 // LoginWithUUID 用户登录
 // 该方法会一直阻塞，直到用户扫码登录，或者二维码过期
 func (b *Bot) LoginWithUUID(uuid string) error {
+	fmt.Printf("openwechat::LoginWithUUID() start...\n")
 	b.uuid = uuid
 	// 二维码获取回调
 	if b.UUIDCallback != nil {
